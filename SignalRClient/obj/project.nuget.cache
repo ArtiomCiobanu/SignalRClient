@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "LeuYbo4LM7KPLzW6yn2VwlcovFJrjwMtiq00fPQfUoeCRNseEZylrf7lDQb1l5RaqO69gk9J5X7vIy/MCoQ1sQ==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\the-coolest-developers\\signalr\\SignalRClient\\SignalRClient\\SignalRClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.connections.abstractions.6.0.0-preview.3.21201.13.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.http.connections.client.6.0.0-preview.3.21201.13.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.http.connections.common.6.0.0-preview.3.21201.13.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.http.features\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.http.features.6.0.0-preview.3.21201.13.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.signalr.client.6.0.0-preview.3.21201.13.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.signalr.client.core.6.0.0-preview.3.21201.13.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.signalr.common.6.0.0-preview.3.21201.13.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.signalr.protocols.json.6.0.0-preview.3.21201.13.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0-preview.3.21201.4\\microsoft.extensions.dependencyinjection.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0-preview.3.21201.4\\microsoft.extensions.dependencyinjection.abstractions.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0-preview.3.21201.4\\microsoft.extensions.logging.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0-preview.3.21201.4\\microsoft.extensions.logging.abstractions.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.extensions.options\\6.0.0-preview.3.21201.4\\microsoft.extensions.options.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0-preview.3.21201.4\\microsoft.extensions.primitives.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0-preview.3.21201.4\\system.diagnostics.diagnosticsource.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\system.io.pipelines\\6.0.0-preview.3.21201.4\\system.io.pipelines.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0-preview.3.21201.4\\system.runtime.compilerservices.unsafe.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\system.text.encodings.web\\6.0.0-preview.3.21201.4\\system.text.encodings.web.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\system.text.json\\6.0.0-preview.3.21201.4\\system.text.json.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\system.threading.channels\\6.0.0-preview.3.21201.4\\system.threading.channels.6.0.0-preview.3.21201.4.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\aciob\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
