@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR.Client;
 
@@ -13,10 +14,41 @@ namespace SignalRClient
         private static Guid _playerId;
         private static string _nickname;
 
-        static async Task Main(string[] args)
+        private static int _rootTileX;
+        private static int _rootTileY;
+
+        private static string _url = "https://localhost:44373/TileGame";
+
+        private static async Task Main()
+        {
+            var connection = GetConnection();
+            await connection.StartAsync();
+
+            Console.WriteLine("Connection established");
+
+            await connection.SendAsync("Connect", _token);
+            Console.WriteLine("The token has been sent");
+            Console.ReadKey();
+
+            await connection.SendAsync("GetRootTile", _playerId);
+            Console.ReadKey();
+            Console.WriteLine($"RootX: {_rootTileX}, RootY: {_rootTileY}");
+
+            var newTilex = _rootTileX;
+            var newTileY = _rootTileY + 1;
+            await connection.SendAsync("PlaceTile", _playerId, 1, newTilex, newTileY, 0);
+
+            Console.ReadKey();
+            await connection.SendAsync("Disconnect", _playerId);
+            await connection.StopAsync();
+
+            Console.ReadKey();
+        }
+
+        private static HubConnection GetConnection()
         {
             var connection = new HubConnectionBuilder()
-                .WithUrl("https://localhost:44373/TileGame",
+                .WithUrl(_url,
                     c =>
                     {
                         //c.AccessTokenProvider = () => Task.FromResult(_token);
@@ -34,26 +66,24 @@ namespace SignalRClient
             };
 
             connection.On<string, string>("ReceiveMessage", PrintReceivedMessage);
-            await connection.StartAsync();
-
-            Console.WriteLine("Connection established");
-
+            connection.On<int, int>("GetRootTilePosition", GetRootTilePosition);
             connection.On<string>("PlayerConnected", PlayerConnected);
             connection.On<string>("PlayerDisconnected", PlayerDisconnected);
-
             connection.On<Guid, string>("GetPlayerData", GetPlayerData);
+            connection.On<string, int, int, int, int>("PlacedTileNotification", PlacedTileNotification);
 
-            var user = "aaq"; //Console.ReadLine();
-            var message = "bbb"; //Console.ReadLine();
-            //await connection.SendAsync("SendOthers", user, message);
+            return connection;
+        }
 
-            await connection.SendAsync("Connect", _token);
-
-            Console.ReadKey();
-            await connection.SendAsync("Disconnect", _playerId);
-            await connection.StopAsync();
-
-            Console.ReadKey();
+        private static void PlacedTileNotification(
+            string nickname,
+            int x,
+            int y,
+            int tileTypeId,
+            int rotation)
+        {
+            Console.WriteLine(
+                $"The player {nickname} has placed the tile: [{x},{y}] with id {tileTypeId} with rotation: {rotation}");
         }
 
         private static void PrintReceivedMessage(string user, string message)
@@ -76,5 +106,17 @@ namespace SignalRClient
             _playerId = playerId;
             _nickname = nickname;
         }
+
+        private static void GetRootTilePosition(int x, int y)
+        {
+            _rootTileX = x;
+            _rootTileY = y;
+        }
+    }
+
+    public class ConnectResponse
+    {
+        public Guid PlayerId { get; init; }
+        public string Nickname { get; init; }
     }
 }
